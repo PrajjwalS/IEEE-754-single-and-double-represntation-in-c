@@ -24,6 +24,7 @@ void print_64_bits(void *ptr){
 	printf("\nEntered Value:%lf", *(double*)ptr);
 	printf("\nHex Representation:%lX", *((unsigned long long *)ptr) ); // expecting int to be 64 bits
 	printf("\nIEEE Representation in Binaries:");
+	// for +ve numbers sign bit loss in conversion to binary 
 	if(*(double*)ptr >= 0)
 		printf("0");
 	print_bin((*(unsigned long long *)ptr));
