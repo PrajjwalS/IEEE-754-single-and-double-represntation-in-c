@@ -8,8 +8,8 @@ void print_bin(unsigned long long num){
 	printf("%d",num%2);
 }
 
-void print_32_bits(void *ptr){
-	printf("\nEntered Value:%f", *(float*)ptr);
+void print_32_bits(float *ptr){
+	printf("\nEntered Value:%f", *ptr);
 	printf("\nHex Representation:%X", *((unsigned int *)ptr) ); // expecting int to be 32 bits
 	printf("\nIEEE Representation in Binaries:");
 	// for +ve numbers sign bit loss in conversion to binary 
@@ -19,9 +19,9 @@ void print_32_bits(void *ptr){
 	printf("\n");
 }
 
-void print_64_bits(void *ptr){
+void print_64_bits(double *ptr){
 	
-	printf("\nEntered Value:%lf", *(double*)ptr);
+	printf("\nEntered Value:%lf", *ptr);
 	printf("\nHex Representation:%lX", *((unsigned long long *)ptr) ); // expecting int to be 64 bits
 	printf("\nIEEE Representation in Binaries:");
 	// for +ve numbers sign bit loss in conversion to binary 
